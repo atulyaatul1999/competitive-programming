@@ -1,7 +1,14 @@
+def isprime(n):
+    if n==1 or n== 0:
+        return False
+    else:
+        for i in range(2,x+1):
+            if n%i==0:
+                return False
+        else:
+            return True
 n=int(input())
-for i in range(2,n**0.5):
-  if n%i==0:
-    print("%d is not a prime number"%n)
-else:
-  print("%d is a prime number"%n)
+x=int(n**.5)
+print(isprime(n))
+
  
