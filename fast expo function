@@ -1,0 +1,9 @@
+def expo(a,n):
+    if n==2:
+        return a*a
+    elif n%2==0:
+        return (expo(a,n/2))**2
+    elif n%2!=0:
+        return a*expo(a,n-1)
+a,n=(int(e) for e in input().split())
+print(expo(a,n))
