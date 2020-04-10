@@ -1,0 +1,26 @@
+def cap(y,a):
+    s=1
+    x=0
+    for i in a:
+        if x+i<=y:
+            x+=i
+        else:
+            s+=1
+            x=i
+    return s
+a=[int(e) for e in input().split()]
+k=int(input())
+left=max(a)
+ans=0
+right=sum(a)
+while(left<=right):
+    mid=(left+right)//2
+    print(mid)
+    print(cap(mid,a),mid)
+    if cap(mid,a)>k:
+        left=mid+1
+    else:
+        ans=mid
+        right=mid-1
+print(ans)
+
