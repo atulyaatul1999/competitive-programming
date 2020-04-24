@@ -8,14 +8,14 @@ int minto1(int n)
      int x=10000,y=10000,z=10000;
      if(i%2==0)
      {
-         x=minto1(n/2)+1;
+         x=a[n/2]+1;
      }
      if(i%3==0)
      {
-         y=minto1(n/3)+1;
+         y=a[n/3]+1;
      }
      else
-     z=minto1(n-1)+1;
+     z=a[n-1]+1;
      a[i]=min(min(x,y),z);
  }
  return a[n];
